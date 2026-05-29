@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر أورا | سلة المشتريات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- شريط التنقل الموحد المحدث -->
+    <nav class="navbar">
+        <div class="logo">أورا <span>Ora Store</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="products.html">المنتجات</a></li>
+            <li><a href="cart.html" class="active">السلة والشحن</a></li>
+            <li><a href="about.html">معلومات عنا</a></li>
+        </ul>
+        <button id="theme-btn" class="cta-btn">تغيير النمط</button>
+    </nav>
+
+    <main class="cart-container">
+        <h2 class="section-title">إتمام عملية الشراء</h2>
+
+        <div class="cart-grid">
+            <!-- القسم الأول: المنتجات التي تم شراؤها -->
+            <section class="checkout-box products-summary">
+                <h3>🛍️ ملخص المنتجات المختارة</h3>
+                <div id="cart-items-list">
+                    <!-- سيتم عرض المنتجات هنا ديناميكياً بواسطة JavaScript -->
+                    <p class="empty-cart-msg">السلة فارغة حالياً. اذهب لصفحة المنتجات وأضف بعض الملابس!</p>
+                </div>
+                <div class="total-price-box">
+                    <span>الإجمالي الكلي:</span>
+                    <span id="total-price-amount">0 د.أ</span>
+                </div>
+            </section>
+
+            <!-- القسم الثاني: خانات معلومات الزبون والشحن -->
+            <section class="checkout-box customer-form-box">
+                <h3>📋 معلومات الشحن والتوصيل</h3>
+                <form id="orderForm" onsubmit="submitOrder(event)">
+                    <div class="form-group">
+                        <label>الاسم الكامل</label>
+                        <input type="text" placeholder="أدخل اسمك الثلاثي" required>
+                    </div>
+                    <div class="form-group">
+                        <label>رقم الهاتف</label>
+                        <input type="tel" placeholder="07xxxxxxxx" required>
+                    </div>
+                    <div class="form-group">
+                        <label>عنوان التوصيل</label>
+                        <input type="text" placeholder="المدينة، اسم الشارع، البناية" required>
+                    </div>
+                    <div class="form-group">
+                        <label>طريقة الدفع</label>
+                        <select required>
+                            <option value="cod">الدفع عند الاستلام (COD)</option>
+                            <option value="card">بطاقة ائتمانية</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="action-btn checkout-submit-btn">تأكيد وطلب الشراء</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

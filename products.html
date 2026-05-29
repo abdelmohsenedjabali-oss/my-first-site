@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر أورا | المنتجات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- شريط التنقل الموحد المحدث -->
+    <nav class="navbar">
+        <div class="logo">أورا <span>Ora Store</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" id="nav-index">الرئيسية</a></li>
+            <li><a href="products.html" id="nav-products">المنتجات</a></li>
+            <li><a href="cart.html" id="nav-cart">السلة والشحن</a></li>
+            <li><a href="about.html" id="nav-about">معلومات عنا</a></li>
+        </ul>
+        <button id="theme-btn" class="cta-btn">تغيير النمط</button>
+    </nav>
+
+    <!-- حاوية المنتجات العمودية -->
+    <main class="products-wrapper">
+        <h2 class="section-title">أحدث الملابس المتوفرة</h2>
+        
+        <!-- شبكة المنتجات العمودية -->
+        <div class="vertical-grid">
+            
+            <!-- منتج 1 -->
+            <div class="product-card">
+                <div class="product-image">🧥</div>
+                <h3>معطف شتوي أنيق</h3>
+                <p class="price">150 د.أ</p>
+                <button class="buy-btn" onclick="addToCart('معطف شتوي أنيق')">إضافة للسلة</button>
+            </div>
+
+            <!-- منتج 2 -->
+            <div class="product-card">
+                <div class="product-image">👕</div>
+                <h3>قميص قطني كاجوال</h3>
+                <p class="price">45 د.أ</p>
+                <button class="buy-btn" onclick="addToCart('قميص قطني كاجوال')">إضافة للسلة</button>
+            </div>
+
+            <!-- منتج 3 -->
+            <div class="product-card">
+                <div class="product-image">👗</div>
+                <h3>فستان سهرة عصري</h3>
+                <p class="price">200 د.أ</p>
+                <button class="buy-btn" onclick="addToCart('فستان سهرة عصري')">إضافة للسلة</button>
+            </div>
+
+            <!-- منتج 4 -->
+            <div class="product-card">
+                <div class="product-image">👖</div>
+                <h3>بنطال جينز كلاسيك</h3>
+                <p class="price">60 د.أ</p>
+                <button class="buy-btn" onclick="addToCart('بنطال جينز كلاسيك')">إضافة للسلة</button>
+            </div>
+
+            <!-- منتج 5 -->
+            <div class="product-card">
+                <div class="product-image">👟</div>
+                <h3>حذاء رياضي مريح</h3>
+                <p class="price">85 د.أ</p>
+                <button class="buy-btn" onclick="addToCart('حذاء رياضي مريح')">إضافة للسلة</button>
+            </div>
+
+        </div>
+
+        <!-- زر الانتقال لصفحة معلومات المتجر -->
+        <div class="navigation-container">
+            <a href="about.html" class="action-btn nav-to-about-btn">لمعرفة المزيد عن متجرنا اضغط هنا</a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
